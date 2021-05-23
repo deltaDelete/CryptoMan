@@ -6,11 +6,28 @@
       xmlns:local="clr-namespace:CryptoMan"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page1" ShowsNavigationUI="False">
+      Title="AES" ShowsNavigationUI="False">
 
-    <Grid>
-        <Button Margin="293,121,75,120">
-            АББО
-        </Button>
+    <Grid Margin="255, 0, 0, 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52"></RowDefinition>
+            <RowDefinition Height="52"></RowDefinition>
+            <RowDefinition Height="52"></RowDefinition>
+            <RowDefinition Height="52"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Style="{StaticResource TextBlock}">
+            <Run Style="{StaticResource Article}">Шифрование AES</Run>
+        </TextBlock>
+        <TextBox x:Name="cryptText" ToolTip="Введите текст, который желаете зашифровать или расшифровать" Padding="10" Margin="5" Grid.Row="1" Grid.ColumnSpan="3" Text="Введите текст, который желаете зашифровать"/>
+        <TextBox x:Name="cryptKey" ToolTip="Введите ключ, который будет использоваться для шифрования" Padding="10" Margin="5" Grid.Row="2" Grid.ColumnSpan="3" Text="theverygoodkey"/>
+        <Button Click="Encrypt" Grid.Column="0" Grid.Row="3" Margin="5" FontSize="14" Content="Зашифровать"/>
+        <Button Click="Decrypt" Grid.Column="1" Grid.Row="3" Margin="5" FontSize="14" Content="Расшифровать"/>
+        <TextBox x:Name="result" ToolTip="Результат" Padding="10" Margin="5" Grid.Row="4" Grid.ColumnSpan="3" TextWrapping="Wrap"/>
     </Grid>
 </Page>

@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:CryptoMan"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionaries/Styles.xaml"/>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
     </Application.Resources>
 </Application>

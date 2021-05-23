@@ -21,7 +21,7 @@ namespace CryptoMan
     /// </summary>
     public partial class MainWindow : Window
     {
-        bool isMenuOpen = false;
+        bool isMenuOpen;
         public MainWindow()
         {
             InitializeComponent();
@@ -31,6 +31,8 @@ namespace CryptoMan
         // Раскрыть/Свернуть меню
         private void Menu_Click(object sender, RoutedEventArgs e)
         {
+            if (MenuGrid.Width == 255) {isMenuOpen = true;} else { isMenuOpen = false; }
+
             CubicEase easing = new CubicEase();
             easing.EasingMode = EasingMode.EaseInOut;
 
@@ -69,6 +71,11 @@ namespace CryptoMan
         private void Nav2P2(object sender, RoutedEventArgs e)
         {
             Frame1.Source = new Uri("Pages/Page2.xaml", UriKind.Relative);
+
+        }
+        private void Nav2About(object sender, RoutedEventArgs e)
+        {
+            Frame1.Source = new Uri("Pages/About.xaml", UriKind.Relative);
 
         }
     }
