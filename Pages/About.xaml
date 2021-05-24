@@ -9,7 +9,7 @@
       Title="About">
 
     <Grid>
-        <TextBlock Margin="255,0,0,0" Style="{StaticResource TextBlock}">
+        <TextBlock Margin="255 0 0 0" Style="{StaticResource TextBlock}">
             <Run Style="{StaticResource Article}">О программе</Run>
             <LineBreak/>
             <Run>Автор: Воронин Роман Витальевич</Run>

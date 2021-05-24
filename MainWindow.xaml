@@ -8,7 +8,7 @@
         Title="CryptoMan" Height="450" Width="800" MinHeight="450" MinWidth="800">
     <Grid>
         <Frame x:Name="Frame1" Source="Pages/Page1.xaml" NavigationUIVisibility="Hidden"/>
-        <Grid x:Name="MenuGrid" HorizontalAlignment="Left" Width="255" MinWidth="0" MaxWidth="255">
+        <Grid x:Name="MenuGrid" HorizontalAlignment="Left" Width="{DynamicResource MenuWidth}" MinWidth="0" MaxWidth="255">
             <Rectangle Fill="#DDD">
                 <Rectangle.Effect>
                     <DropShadowEffect Color="#CFCFCFCF" BlurRadius="10" Direction="0"/>
@@ -19,7 +19,7 @@
                     <TextBlock Width="220"><Run FontFamily="Segoe MDL2 Assets" Text="&#xE192;    "/><Run Text="AES"/></TextBlock>
                 </Button>
                 <Button x:Name="P2Button" Click="Nav2P2" Style="{StaticResource MenuEntry}" HorizontalAlignment="Left">
-                    <TextBlock Width="220"><Run FontFamily="Segoe MDL2 Assets" Text="&#xE192;    "/><Run Text="DES" Block.TextAlignment="Right" FontSize="16"/></TextBlock>
+                    <TextBlock Width="220"><Run FontFamily="Segoe MDL2 Assets" Text="&#xE192;    "/><Run Text="RSA" Block.TextAlignment="Right" FontSize="16"/></TextBlock>
                 </Button>
                 <Button x:Name="About" Click="Nav2About" Style="{StaticResource MenuEntry}" HorizontalAlignment="Left" VerticalAlignment="Bottom">
                     <TextBlock Width="220"><Run FontFamily="Segoe MDL2 Assets" Text="&#xE946;    "/><Run Text="О программе" Block.TextAlignment="Right" FontSize="16"/></TextBlock>

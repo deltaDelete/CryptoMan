@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows;
 
 namespace AES
 {
@@ -26,7 +24,7 @@ namespace AES
                 s += alphabet[r];
             }
 
-            //prevent NULL byte block.
+            //Предотвращение нулевого битового блока
             s = s.Replace("00", "11");
 
             return s;
@@ -53,12 +51,15 @@ namespace AES
 
         public static string encryptData(string text, string hexKey)
         {
-            checkKey(hexKey);
+            if (checkKey(hexKey) == "KeylengthException" || checkKey(hexKey) == "KeyZeroBlockException")
+            {
+                return "ОШИБКА";
+            }
 
-            //generate random IV (16 bytes)
+            //генерация рандомных IV (16 bytes)
             string hexIV = generateRandomHex(16);
 
-            //convert plainText to hex string.
+            //конвертация текста в шестнадцатиричный.
             byte[] bytesData = System.Text.Encoding.UTF8.GetBytes(text);
             string hexStr = dataToHexString(bytesData);
 
@@ -73,7 +74,10 @@ namespace AES
 
         public static string decryptData(string hexStr, string hexKey)
         {
-            checkKey(hexKey);
+            if (checkKey(hexKey) == "KeylengthException" || checkKey(hexKey) == "KeyZeroBlockException") 
+            {
+                return "ОШИБКА";
+            }
             string plainText = null;
 
             if (hexStr.Length > 128)
@@ -97,7 +101,7 @@ namespace AES
             return plainText;
         }
 
-        private static void checkKey(string hexKey)
+        private static string checkKey(string hexKey)
         {
             hexKey = hexKey.Trim();
             hexKey = hexKey.Replace(" ", "");
@@ -105,7 +109,9 @@ namespace AES
 
             if (hexKey.Length != 64)
             {
-                throw new Exception("key length is not 256 bit (64 hex characters)");
+                //throw new Exception("key length is not 256 bit (64 hex characters)");
+                MessageBox.Show("Длина ключа не 256 бит (64 шестнадцатиричных символа)");
+                return "KeylengthException";
             }
 
             int i;
@@ -113,9 +119,12 @@ namespace AES
             {
                 if (hexKey[i] == '0' && hexKey[i + 1] == '0')
                 {
-                    throw new Exception("key cannot contain zero byte block");
+                    //throw new Exception("key cannot contain zero byte block");
+                    System.Windows.MessageBox.Show("Ключ не может содержать нулевой битовый блок (два нуля подряд)");
+                    return "KeyZeroBlockException";
                 }
             }
+            return "";
         }
 
         private static string __computeHMAC(string hexIV, string cipherHexStr, string hexKey, string hmacHexKey)

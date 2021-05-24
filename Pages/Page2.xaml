@@ -6,15 +6,15 @@
       xmlns:local="clr-namespace:CryptoMan.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page2">
+      Title="RSA">
 
-    <Grid Margin="255, 0, 0, 0">
+    <Grid Margin="255 0 0 0">
         <Grid.RowDefinitions>
             <RowDefinition Height="52"></RowDefinition>
             <RowDefinition Height="52"></RowDefinition>
             <RowDefinition Height="52"></RowDefinition>
             <RowDefinition Height="52"></RowDefinition>
-            <RowDefinition Height="52"></RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -22,10 +22,12 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Style="{StaticResource TextBlock}">
-            <Run Style="{StaticResource Article}">Шифрование DES</Run>
+            <Run Style="{StaticResource Article}">Шифрование RSA (незавершенное)</Run>
         </TextBlock>
-        <TextBox Padding="10" Margin="5" Grid.Row="1" Grid.ColumnSpan="3">Введите текст, который желаете зашифровать</TextBox>
-        <Button Grid.Column="0" Grid.Row="2" Margin="5" FontSize="14" Content="Зашифровать"/>
-        <Button Grid.Column="1" Grid.Row="2" Margin="5" FontSize="14" Content="Расшифровать"/>
+        <TextBox x:Name="cryptText" ToolTip="Введите текст, который желаете зашифровать или расшифровать" Padding="10" Margin="5" Grid.Row="1" Grid.ColumnSpan="3" Text="Введите текст, который желаете зашифровать или расшифровать"/>
+        <TextBox x:Name="cryptKey" ToolTip="Введите ключ, который будет использоваться для шифрования" Padding="10" Margin="5" Grid.Row="2" Grid.ColumnSpan="3" Text="65169BA703721149C9997CC111AD1D6ACDCD7D45A6232049594EB20827C93229" MaxLength="64"/>
+        <Button Click="Encrypt" Grid.Column="0" Grid.Row="3" Margin="5" FontSize="14" Content="Зашифровать"/>
+        <Button Click="Decrypt" Grid.Column="1" Grid.Row="3" Margin="5" FontSize="14" Content="Расшифровать"/>
+        <TextBox x:Name="result" ToolTip="Здесь будет отображен результат" Padding="10" Margin="5" Grid.Row="4" Grid.ColumnSpan="3" TextWrapping="Wrap" Text="Результат"/>
     </Grid>
 </Page>

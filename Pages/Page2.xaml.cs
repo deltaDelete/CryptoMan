@@ -24,5 +24,11 @@ namespace CryptoMan.Pages
         {
             InitializeComponent();
         }
-    }
-}
+        private void Encrypt(object sender, EventArgs e)
+        {
+            MessageBox.Show("Пока что не работает");
+        }
+        private void Decrypt(object sender, EventArgs e)
+        {
+            MessageBox.Show("Пока что не работает");
+        }

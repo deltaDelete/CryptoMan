@@ -17,3 +17,7 @@ C:\Users\PoMaB\source\repos\CryptoMan\obj\Release\CryptoMan.csproj.GenerateResou
 C:\Users\PoMaB\source\repos\CryptoMan\obj\Release\CryptoMan.csproj.CoreCompileInputs.cache
 C:\Users\PoMaB\source\repos\CryptoMan\obj\Release\CryptoMan.exe
 C:\Users\PoMaB\source\repos\CryptoMan\obj\Release\CryptoMan.pdb
+C:\Users\PoMaB\source\repos\CryptoMan\obj\Release\Dictionaries\Styles.baml
+C:\Users\PoMaB\source\repos\CryptoMan\obj\Release\Pages\About.g.cs
+C:\Users\PoMaB\source\repos\CryptoMan\obj\Release\App.baml
+C:\Users\PoMaB\source\repos\CryptoMan\obj\Release\Pages\About.baml
