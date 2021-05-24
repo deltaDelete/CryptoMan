@@ -15,5 +15,4 @@
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Padding" Value="15"/>
     </Style>
-    <system:Double x:Key="MenuWidth">255</system:Double>
 </ResourceDictionary>

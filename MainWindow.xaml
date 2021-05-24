@@ -8,7 +8,7 @@
         Title="CryptoMan" Height="450" Width="800" MinHeight="450" MinWidth="800">
     <Grid>
         <Frame x:Name="Frame1" Source="Pages/Page1.xaml" NavigationUIVisibility="Hidden"/>
-        <Grid x:Name="MenuGrid" HorizontalAlignment="Left" Width="{DynamicResource MenuWidth}" MinWidth="0" MaxWidth="255">
+        <Grid x:Name="MenuGrid" HorizontalAlignment="Left" Width="255" MinWidth="0" MaxWidth="255">
             <Rectangle Fill="#DDD">
                 <Rectangle.Effect>
                     <DropShadowEffect Color="#CFCFCFCF" BlurRadius="10" Direction="0"/>

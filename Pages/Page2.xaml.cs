@@ -32,3 +32,5 @@ namespace CryptoMan.Pages
         {
             MessageBox.Show("Пока что не работает");
         }
+    }
+}
