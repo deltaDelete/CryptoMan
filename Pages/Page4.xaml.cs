@@ -17,16 +17,16 @@ using System.Windows.Shapes;
 namespace CryptoMan.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Page3.xaml
+    /// Логика взаимодействия для Page4.xaml
     /// </summary>
-    public partial class Page3 : Page
+    public partial class Page4 : Page
     {
-        public Page3()
+        public Page4()
         {
             InitializeComponent();
         }
 
-        // менюшки
+        //менюшки
         private void RUAlphabet(object sender, RoutedEventArgs e)
         {
             cryptAlphabet.Text = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
@@ -40,17 +40,16 @@ namespace CryptoMan.Pages
             cryptAlphabet.Text = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ";
         }
 
-
-        // кнопочки
+        //кнопошки
         private void Encrypt(object sender, EventArgs e)
         {
-            var vigenere = new VigenereCipher(cryptAlphabet.Text.ToUpper());
-            result.Text = vigenere.Encrypt(cryptText.Text.ToUpper(), cryptKey.Text.ToUpper());
+            var atbash = new Atbash();
+            result.Text = atbash.EncryptText(cryptText.Text.ToUpper(), cryptAlphabet.Text.ToLower());
         }
         private void Decrypt(object sender, EventArgs e)
         {
-            var vigenere = new VigenereCipher(cryptAlphabet.Text.ToUpper());
-            result.Text = vigenere.Decrypt(cryptText.Text.ToUpper(), cryptKey.Text.ToUpper());
+            var atbash = new Atbash();
+            result.Text = atbash.DecryptText(cryptText.Text.ToUpper(), cryptAlphabet.Text.ToLower());
         }
     }
 }

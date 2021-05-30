@@ -108,6 +108,11 @@ namespace CryptoMan
             MainFrame.Source = new Uri("Pages/Page3.xaml", UriKind.Relative);
 
         }
+        private void Nav2P4(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Source = new Uri("Pages/Page4.xaml", UriKind.Relative);
+
+        }
         private void Nav2About(object sender, RoutedEventArgs e)
         {
             MainFrame.Source = new Uri("Pages/About.xaml", UriKind.Relative);

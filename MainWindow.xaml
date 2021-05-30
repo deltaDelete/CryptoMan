@@ -24,6 +24,9 @@
                 <Button x:Name="P3Button" Click="Nav2P3" Style="{StaticResource MenuEntry}" HorizontalAlignment="Left">
                     <TextBlock Width="220"><Run FontFamily="/CryptoMan;component/Resources/#Segoe MDL2 Assets" Text="&#xE192;    "/><Run Text="Шифр Виженера" Block.TextAlignment="Right" FontSize="16"/></TextBlock>
                 </Button>
+                <Button x:Name="P4Button" Click="Nav2P4" Style="{StaticResource MenuEntry}" HorizontalAlignment="Left">
+                    <TextBlock Width="220"><Run FontFamily="/CryptoMan;component/Resources/#Segoe MDL2 Assets" Text="&#xE192;    "/><Run Text="Шифр Атбаш" Block.TextAlignment="Right" FontSize="16"/></TextBlock>
+                </Button>
                 <Button x:Name="About" Click="Nav2About" Style="{StaticResource MenuEntry}" HorizontalAlignment="Left">
                     <TextBlock Width="220"><Run FontFamily="/CryptoMan;component/Resources/#Segoe MDL2 Assets" Text="&#xE946;    "/><Run Text="О программе" Block.TextAlignment="Right" FontSize="16"/></TextBlock>
                 </Button>

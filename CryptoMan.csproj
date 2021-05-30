@@ -59,6 +59,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Page4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\Styles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -72,6 +76,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Code\AES.cs" />
+    <Compile Include="Code\Atbash.cs" />
     <Compile Include="Code\CaesarCipher.cs" />
     <Compile Include="Code\GetRandomHEX.cs" />
     <Compile Include="Code\VigenereCipher.cs" />
@@ -104,6 +109,9 @@
     </Compile>
     <Compile Include="Pages\Page3.xaml.cs">
       <DependentUpon>Page3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page4.xaml.cs">
+      <DependentUpon>Page4.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
