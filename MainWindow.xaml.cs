@@ -50,32 +50,62 @@ namespace CryptoMan
             MenuGridAnimationClose.Duration = TimeSpan.FromSeconds(0.1);
             MenuGridAnimationClose.EasingFunction = easing;
 
+            //Анимация фрейма
+            ThicknessAnimation MainFrameAnimationClose = new ThicknessAnimation();
+            ThicknessAnimation MainFrameAnimationOpen = new ThicknessAnimation();
+            Thickness marginclosed = new Thickness
+            {
+                Left = 0,
+                Right = 0,
+                Top = 0,
+                Bottom = 0
+            };
+            Thickness marginopened = new Thickness
+            {
+                Left = 255,
+                Right = 0,
+                Top = 0,
+                Bottom = 0
+            };
+            MainFrameAnimationClose.From = marginopened;
+            MainFrameAnimationClose.To = marginclosed;
+            MainFrameAnimationClose.Duration = TimeSpan.FromSeconds(0.1);
+            MainFrameAnimationClose.EasingFunction = easing;
+
+            MainFrameAnimationOpen.From = marginclosed;
+            MainFrameAnimationOpen.To = marginopened;
+            MainFrameAnimationOpen.Duration = TimeSpan.FromSeconds(0.1);
+            MainFrameAnimationOpen.EasingFunction = easing;
+
+
             if (isMenuOpen == true)
             {
                 //MenuGrid.Width = MenuGrid.MinWidth;
                 isMenuOpen = false;
                 MenuGrid.BeginAnimation(Grid.WidthProperty, MenuGridAnimationClose);
+                MainFrame.BeginAnimation(Frame.MarginProperty, MainFrameAnimationClose);
             } else if (isMenuOpen == false) {
                 //MenuGrid.Width = MenuGrid.MaxWidth;
                 isMenuOpen = true;
                 MenuGrid.BeginAnimation(Grid.WidthProperty, MenuGridAnimationOpen);
+                MainFrame.BeginAnimation(Frame.MarginProperty, MainFrameAnimationOpen);
             }
         }
         
         //Кнопки меню
         private void Nav2P1(object sender, RoutedEventArgs e)
         {
-            Frame1.Source = new Uri("Pages/Page1.xaml", UriKind.Relative);
+            MainFrame.Source = new Uri("Pages/Page1.xaml", UriKind.Relative);
 
         }
         private void Nav2P2(object sender, RoutedEventArgs e)
         {
-            Frame1.Source = new Uri("Pages/Page2.xaml", UriKind.Relative);
+            MainFrame.Source = new Uri("Pages/Page2.xaml", UriKind.Relative);
 
         }
         private void Nav2About(object sender, RoutedEventArgs e)
         {
-            Frame1.Source = new Uri("Pages/About.xaml", UriKind.Relative);
+            MainFrame.Source = new Uri("Pages/About.xaml", UriKind.Relative);
 
         }
     }

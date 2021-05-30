@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CryptoMan.Code;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,11 +27,19 @@ namespace CryptoMan.Pages
         }
         private void Encrypt(object sender, EventArgs e)
         {
-            MessageBox.Show("Пока что не работает");
+            CaesarCipher caesar = new CaesarCipher();
+            result.Text = caesar.Encrypt(cryptText.Text, Convert.ToInt32(cryptNum.Text), cryptKey.Text);
         }
+
         private void Decrypt(object sender, EventArgs e)
         {
-            MessageBox.Show("Пока что не работает");
+            CaesarCipher caesar = new CaesarCipher();
+            result.Text = caesar.Decrypt(cryptText.Text, -Convert.ToInt32(cryptNum.Text), cryptKey.Text);
+        }
+
+        private void ReturnToStandard(object sender, RoutedEventArgs e)
+        {
+            cryptKey.Text = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
         }
     }
 }

@@ -9,12 +9,17 @@
       Title="About">
 
     <Grid>
-        <TextBlock Margin="255 0 0 0" Style="{StaticResource TextBlock}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Margin="60 0 0 0" Grid.Row="0" Style="{StaticResource TextBlock}">
             <Run Style="{StaticResource Article}">О программе</Run>
-            <LineBreak/>
+        </TextBlock>
+        <TextBlock Grid.Row="1" Style="{StaticResource TextBlock}">
             <Run>Автор: Воронин Роман Витальевич</Run>
             <LineBreak/>
-            <Run>Студет группы ИС(ПРО)-11</Run>
+            <Run>Студент группы ИС(ПРО)-11</Run>
             <LineBreak/>
             <Run>2021</Run>
         </TextBlock>

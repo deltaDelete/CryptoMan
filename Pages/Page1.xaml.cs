@@ -48,5 +48,16 @@ namespace CryptoMan.Pages
             result.Text = decryptedText;
 
         }
+        private void GenKey(object sender, EventArgs e)
+        {
+            string randomKey = CryptoMan.Code.RandomHEX.GetRandomHexNumber(64);
+            randomKey = randomKey.Replace("0", "1");
+            cryptKey.Text = randomKey;
+        }
+        private void ReturnToStandard(object sender, EventArgs e)
+        {
+            string standardvalue = "65169BA703721149C9997CC111AD1D6ACDCD7D45A6232049594EB20827C93229";
+            cryptKey.Text = standardvalue;
+        }
     }
 }

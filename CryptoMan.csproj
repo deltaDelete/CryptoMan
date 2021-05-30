@@ -55,7 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Dictionaries\Styles.xaml">
+    <Page Include="Resources\Styles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -67,7 +67,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AES.cs" />
+    <Compile Include="Code\AES.cs" />
+    <Compile Include="Code\Caesar.cs" />
+    <Compile Include="Code\GetRandomHEX.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -116,10 +118,22 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Resources\segoeui.ttf" />
+    <Resource Include="Resources\segoeuib.ttf" />
+    <Resource Include="Resources\segoeuii.ttf" />
+    <Resource Include="Resources\segoeuil.ttf" />
+    <Resource Include="Resources\segoeuisl.ttf" />
+    <Resource Include="Resources\segoeuiz.ttf" />
+    <Resource Include="Resources\seguibl.ttf" />
+    <Resource Include="Resources\seguibli.ttf" />
+    <Resource Include="Resources\seguili.ttf" />
+    <Resource Include="Resources\seguisb.ttf" />
+    <Resource Include="Resources\seguisbi.ttf" />
+    <Resource Include="Resources\seguisli.ttf" />
+    <Resource Include="Resources\segmdl2.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

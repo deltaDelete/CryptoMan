@@ -17,7 +17,7 @@ C:\Users\PoMaB\source\repos\CryptoMan\obj\Debug\Pages\Page1.g.cs
 C:\Users\PoMaB\source\repos\CryptoMan\obj\Debug\Pages\Page2.g.cs
 C:\Users\PoMaB\source\repos\CryptoMan\obj\Debug\Pages\Page1.baml
 C:\Users\PoMaB\source\repos\CryptoMan\obj\Debug\Pages\Page2.baml
-C:\Users\PoMaB\source\repos\CryptoMan\obj\Debug\Dictionaries\Styles.baml
 C:\Users\PoMaB\source\repos\CryptoMan\obj\Debug\App.baml
 C:\Users\PoMaB\source\repos\CryptoMan\obj\Debug\Pages\About.g.cs
 C:\Users\PoMaB\source\repos\CryptoMan\obj\Debug\Pages\About.baml
+C:\Users\PoMaB\source\repos\CryptoMan\obj\Debug\Resources\Styles.baml
