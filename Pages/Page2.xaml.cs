@@ -37,9 +37,17 @@ namespace CryptoMan.Pages
             result.Text = caesar.Decrypt(cryptText.Text, -Convert.ToInt32(cryptNum.Text), cryptKey.Text);
         }
 
-        private void ReturnToStandard(object sender, RoutedEventArgs e)
+        private void RUAlphabet(object sender, RoutedEventArgs e)
         {
             cryptKey.Text = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
+        }
+        private void ENAlphabet(object sender, RoutedEventArgs e)
+        {
+            cryptKey.Text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        }
+        private void RUENAlphabet(object sender, RoutedEventArgs e)
+        {
+            cryptKey.Text = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ";
         }
     }
 }
